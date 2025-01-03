@@ -342,13 +342,13 @@ def main():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            if st.button("↺ Reset", key=f"reset_{current_param}", type="secondary"):
-                reset_app()  # Use the reset_app function instead of individual resets
+            if st.button("🔄 Clear All", key="clear_all"):
+                clear_current_counts()
                 st.rerun()
         
         with col2:
-            if st.button("🔄 Clear All", key="clear_all"):
-                clear_current_counts()
+            if st.button("↺ Reset", key=f"reset_{current_param}", type="secondary"):
+                reset_app()  # Use the reset_app function instead of individual resets
                 st.rerun()
 
     # Add Session Management UI
